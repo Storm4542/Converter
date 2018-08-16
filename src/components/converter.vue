@@ -49,8 +49,7 @@
 
             },
             updateData() {
-                console.log('update data in converter');
-                console.log(this.selected);
+
                 axios.get(BASE_URL + this.selected).then((res) => {
                     this.exchangeData = res.data.rates;
                 })

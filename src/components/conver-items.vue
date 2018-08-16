@@ -9,7 +9,8 @@
         </div>
         <slot></slot>
         <div class="money">
-            <input class="money-input" :value="exchangeData" type="text">
+            <p>{{exchangeData}}</p>
+            <!--<input class="money-input" :value="exchangeData" type="text">-->
             <p>{{ZHname}}</p>
         </div>
     </div>
@@ -18,6 +19,7 @@
 <script>
     import DownList from './conver-downList'
     import ZHlist from '../assets/ZHLIST'
+
     const defaultSrc = "./image/";
     export default {
         name: "conver-items",
@@ -25,11 +27,11 @@
             country: {
                 type: String
             },
-            exchangeData:{
+            exchangeData: {
                 type: Number
             },
-            selected:{
-                type:String
+            selected: {
+                type: String
             }
         },
         components: {
@@ -41,7 +43,7 @@
                 message: 1,
                 downListVisable: false,
                 value: 1,
-                ZHname:''
+                ZHname: '',
             }
         },
         computed: {
@@ -49,17 +51,17 @@
                 return defaultSrc + this.country + '.png'
             }
         },
-        mounted(){
-            ZHlist.forEach((item)=>{
-                if(item.name === this.country){
-                    this.ZHname =  item.cover
+        mounted() {
+            ZHlist.forEach((item) => {
+                if (item.name === this.country) {
+                    this.ZHname = item.cover
                 }
             })
         },
         methods: {
             changeCountry() {
-                console.log('click item');
-                this.$emit('update:selected',this.country)
+                this.$emit('update:selected', this.country);
+
             }
         }
     }
@@ -69,11 +71,11 @@
     .conver-item {
         height: 2rem;
         width: 9.5rem;
-        background: #ddd;
         margin: .3rem 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        border-bottom: 1px solid #ddd;
         .Country {
             position: relative;
             .flag {
