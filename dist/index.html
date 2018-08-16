@@ -1,0 +1,15 @@
+<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=/Converter/dist/favicon.ico><title>converter</title><style>*{padding: 0;margin: 0;}
+        body{font-size: 16px;}</style><link href=/Converter/dist/css/app.84fecf22.css rel=preload as=style><link href=/Converter/dist/js/app.0f4d02c2.js rel=preload as=script><link href=/Converter/dist/js/chunk-vendors.33fd622f.js rel=preload as=script><link href=/Converter/dist/css/app.84fecf22.css rel=stylesheet></head><body><noscript><strong>We're sorry but converter doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><script src=/Converter/dist/js/chunk-vendors.33fd622f.js></script><script src=/Converter/dist/js/app.0f4d02c2.js></script></body><script>(function (documents, windows) {
+        var domElement = documents.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            setRem = function () {
+                let clientWidth = domElement.clientWidth;
+                if (!clientWidth) return;
+                domElement.style.fontSize = (clientWidth / 10) + 'px';
+            };
+
+        if (!documents.addEventListener) return;
+        setRem();
+        windows.addEventListener(resizeEvt, setRem, false);
+        documents.addEventListener('DOMContentLoaded', setRem, false);
+    })(document, window);</script></html>
